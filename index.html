@@ -2,20 +2,207 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grow and Build</title>
     <link rel="stylesheet" href="style.css">
+    <script src="mobile-navbar.js"></script> 
 </head>
 <body>
-    <header>
-        <ul>
-            <li><a href="https://www.sinatrandf.com.br"><img src="img/Piloto 001.png" alt="logo"></li>
-            <li><a href="#" class="active">Portifólio</a></li>
-            <li><a href="#">Pacotes</a></li>
-            <li><a href="#">Sobre mim</a></li>
-            <li id="contato"><a href="https://api.whatsapp.com/send?phone=5561995624614">Contato</a></li>
-        </ul>     
+
+    <header class="fixed-header">
+        <div class="logo">
+            <img src="img/Piloto 001.png" alt="growandbuild">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portifólio</a></li>
+                <li><a href="#serviços">Serviços</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5561995624614">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="cta-button">
+            <a href="#" class="button mobile-hide">Solicitar Orçamento</a>
+        </div>
+ 
+
+
+    <!-- <header class="fixed-header">
+        <div> -->
+        <!-- <ul> -->
+            <!-- <li><a href="https://www.sinatrandf.com.br" rel="noopener noreferrer"><img src="img/Piloto 001.png" alt="logo"></a></li> -->
+            <!-- <li><a href="#portfolio">Portfólio</a></li> -->
+            <!-- <li><a href="#pacotes">Pacotes</a></li> -->
+            <!-- <li><a href="#serviços">Serviços</a></li> -->
+            <!-- <li id="contato"><a href="https://api.whatsapp.com/send?phone=5561995624614">Contato</a></li> -->
+        <!-- </ul> -->
+    <!-- </div> --> 
+       
     </header>
+
+    <!-- QUEM SOMOS -->
+    <section>
+        <div class="section-with-background">
+            <div class="section-content">
+                <h2>Somos especializados em <span class="blue-text">desenvolvimentos gráficos</span> e <span class="blue-text"> web</span> para empresas, com foco em soluções</h2>
+                <p>Descrição da Sessão</p>
+                <a href="#portfolio" class="portfolio-button">Portfólio</a> <!-- Link para a âncora #portfolio -->
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h1>Portifólio</h1>
+    </section>
     
+    <section id="portfolio" class="gallery">
+        </div>
+        <!-- Suas imagens da galeria aqui -->  
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/f02169178878599.64ef989072b9f.png" alt="">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/ddd75f178785689.64ee297f351d3.jpg" alt="">
+        <img src="https://png.pngtree.com/background/20230708/original/pngtree-dark-and-sophisticated-3d-rendering-of-an-abstract-gallery-room-with-picture-image_4176653.jpg" alt="">
+        <img src="https://e0.pxfuel.com/wallpapers/869/527/desktop-wallpaper-gallery-for-best-dark-souls.jpg" alt="">
+        <img src="https://sm.ign.com/t/ign_br/news/g/gamescom-2/gamescom-2015-prepare-for-dark-souls-3-with-this-g_9qgr.1280.jpg" alt="">
+        <img src="https://sm.ign.com/t/ign_br/news/g/gamescom-2/gamescom-2015-prepare-for-dark-souls-3-with-this-g_9qgr.1280.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/I/A1u+glwunFS._AC_UF894,1000_QL80_.jpg" alt="">
+        <img src="https://darksouls-portuguese.wiki.fextralife.com/file/Dark-Souls---Portuguese/ironknightsummon.jpg" alt="">
+    </section>
+
+    <!-- SERVIÇOS -->
+<section id="serviços" class="services">
+    <div class="container">
+        
+        <div class="service">
+            <img src="design-graphic-icon.png" alt="Design Gráfico">
+            <h3>Design Gráfico</h3>
+            <p>Crie materiais gráficos incríveis para sua marca.</p>
+            <p>Valor: R$300 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="web-design-icon.png" alt="Web Design">
+            <h3>Web Design</h3>
+            <p>Desenvolva websites responsivos e atraentes.</p>
+            <p>Valor: R$500 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="brochure-icon.png" alt="Brochura">
+            <h3>Brochura</h3>
+            <p>Crie brochuras impressionantes para sua empresa.</p>
+            <p>Valor: R$250 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <!-- Adicione mais serviços aqui -->
+        <div class="service">
+            <img src="logo-design-icon.png" alt="Design de Logo">
+            <h3>Design de Logo</h3>
+            <p>Crie um logotipo exclusivo para sua marca.</p>
+            <p>Valor: R$150 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="website-redesign-icon.png" alt="Redesign de Site">
+            <h3>Redesign de Site</h3>
+            <p>Atualize e aprimore seu site existente.</p>
+            <p>Valor: R$350 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="landing-page-icon.png" alt="Landing Page">
+            <h3>Landing Page</h3>
+            <p>Crie páginas de destino eficazes para suas campanhas.</p>
+            <p>Valor: R$200 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="business-card-icon.png" alt="Cartões de Visita">
+            <h3>Cartões de Visita</h3>
+            <p>Design profissional de cartões de visita.</p>
+            <p>Valor: R$100 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="banner-design-icon.png" alt="Banners">
+            <h3>Banners</h3>
+            <p>Crie banners atraentes para eventos e promoções.</p>
+            <p>Valor: R$200 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="party-flyer-icon.png" alt="Flyers de Festa">
+            <h3>Flyers de Festa</h3>
+            <p>Design de flyers para eventos e festas.</p>
+            <p>Valor: R$150 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+        <div class="service">
+            <img src="campaign-post-icon.png" alt="Posts para Campanha">
+            <h3>Posts para Campanha</h3>
+            <p>Crie posts impactantes para suas campanhas de marketing.</p>
+            <p>Valor: R$100 por projeto</p>
+            <a href="#" class="btn-buy">Contratar</a>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- PACOTES -->
+    <section id="pacotes" class="services">
+        <div class="services-content">
+            <h2>Nossos Pacotes</h2>
+            <p>Oferecemos soluções de design gráfico e web design de alta qualidade para ajudar sua empresa a crescer e se destacar.</p>
+        </div>
+        <div class="service-options">
+            <div class="service-option">
+                <h3>Serviço de Design Gráfico</h3>
+                <p>Impressione seus clientes com designs criativos e profissionais para seus materiais de marketing.</p>
+                <ul>
+                    <li>Logotipos personalizados</li>
+                    <li>Flyers e cartazes</li>
+                    <li>Identidade visual</li>
+                </ul>
+                <p class="price">A partir de R$ 499</p>
+                <a href="#" class="btn-buy">Contratar Agora</a>
+            </div>
+            <div class="service-option">
+                <h3>Serviço de Web Design</h3>
+                <p>Crie um site impressionante que atraia visitantes e converta-os em clientes fiéis.</p>
+                <ul>
+                    <li>Design responsivo</li>
+                    <li>Integração de redes sociais</li>
+                    <li>Otimize para mecanismos de busca</li>
+                </ul>
+                <p class="price">A partir de R$ 899</p>
+                <a href="#" class="btn-buy">Contratar Agora</a>
+            </div>
+            <div class="service-option">
+                <h3>Pacote Completo</h3>
+                <p>Obtenha o melhor dos dois mundos com nosso pacote completo de design gráfico e web design.</p>
+                <ul>
+                    <li>Logotipo personalizado e site profissional</li>
+                    <li>Todos os recursos dos serviços individuais</li>
+                    <li>Desconto especial</li>
+                </ul>
+                <p class="price">A partir de R$ 1299</p>
+                <a href="#" class="btn-buy">Contratar Agora</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="cinza-footer">
+        <div class="footer-content">
+            <p>Cresça e construa</p>
+            <ul class="contact-info">
+                <li><a href="https://api.whatsapp.com/send?phone=5561995624614">61995624614</a></li>
+                <li><a href="mailto:contato.growandbuild@gmail.com">contato.growandbuild@gmail.com</a></li>
+            </ul>
+            <img src="img/Piloto 001.png" alt="Logo Grow and Build" class="logo-footer">
+        </div>
+    </footer>
+
+    
+        
 </body>
 </html>
