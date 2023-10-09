@@ -1,12 +1,12 @@
-
-
+@import url("./Header.css");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif; 
 }
+
+
 
 /* Estilos para o ícone do WhatsApp */
 .whatsapp-icon {
@@ -43,15 +43,7 @@ fixed-header {
 }
 
 
-.mobile-menu-icon {
-    display:none;
 
- 
-}
-
-.mobile-menu {
-    display: none;
-}
 
 
 header {
@@ -193,7 +185,7 @@ nav ul li a:hover {
         column-gap: px;
     }
 
-    .container nav ul li {
+    nav ul li {
         margin-right: 0; /* Remover margem entre os itens de menu */
         margin-bottom: 10px; /* Adicionar espaço entre os itens de menu */
     }
@@ -209,7 +201,7 @@ nav ul li a:hover {
  
 /* Estilos para a sessão com fundo de imagem */
 .section-with-background {
-    background-image: url('img/pexels-negative-space-160107.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-image: url('../img/pexels-negative-space-160107.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -675,12 +667,3 @@ body {
         transform: translateX(calc(-33.33% * 3)); /* Ajuste o valor de acordo com a largura dos serviços */
     }
 }
-
-
-
-
-
-
-
-
-

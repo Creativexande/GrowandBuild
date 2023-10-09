@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="img/fav icons/favicon-16x16.png">
         <link rel="manifest" href="img/fav icons/">
         <link rel="stylesheet" href="css/style.css">
-        <script src="mobile-navbar.js"></script> 
+        <script src="mobile-navbar.js" defer></script> 
 </head>
 
 <body>
@@ -29,26 +30,31 @@
             <img src="img/Piloto 001.png" alt="growandbuild">
         </div>
         
-        <nav>
-            <ul>
-                <li><a href="#portfolio">Portifólio</a></li> 
-                <li><a href="#serviços">Serviços</a></li>
-                <li><a href="#pacotes">Pacotes</a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5561995624614">Contato</a></li>
-            </ul>
-        </nav>
-        
-        <div class="mobile-menu-icon">
-            <button><img class="icon" src="img/iconmenu.svg" alt=""></button>
-        </div>
+        <nav class="nav-bar">
+           <div class="nav-list">
+                <ul>     
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portifólio</a></li> 
+                    <li class="nav-item"><a href="#serviços" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#pacotes" class="nav-link">Pacotes</a></li>
+                    <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=5561995624614" class="nav-link">Contato</a></li>
+                </ul>
+            </div> 
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/iconmenu.svg" alt=""></button>
+            </div>
+
+        </nav>  
 
         <div class="mobile-menu">
             <ul>
-                <li><a href="#portfolio">Portifólio</a></li> 
-                <li><a href="#serviços">Serviços</a></li>
-                <li><a href="#pacotes">Pacotes</a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5561995624614">Contato</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portifólio</a></li> 
+                <li class="nav-item"><a href="#serviços" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#pacotes" class="nav-link">Pacotes</a></li>
+                <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=5561995624614" class="nav-link">Contato</a></li>
             </ul>
+        
+
         </div>
 
 
