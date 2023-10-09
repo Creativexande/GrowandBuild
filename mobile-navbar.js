@@ -4,8 +4,8 @@ const menuShow = () => {
   menuMobile.classList.toggle("open");
   
   if (menuMobile.classList.contains('open')) {
-    document.querySelector('.icon').src = 'img/iconmenu.svg';
-  } else {
     document.querySelector('.icon').src = 'img/x.svg';
+  } else {
+    document.querySelector('.icon').src = 'img/iconmenu.svg';
   }
 };
