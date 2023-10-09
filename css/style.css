@@ -1,0 +1,686 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* Estilos para o ícone do WhatsApp */
+.whatsapp-icon {
+    position: fixed; /* Torna o ícone fixo na tela */
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Ajuste a posição horizontal conforme necessário */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+}
+.whatsapp-icon a {
+    text-decoration: none;
+}
+
+.whatsapp-icon img {
+    width: 70px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Torna o ícone circular */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    transition: transform 0.3s ease; /* Adiciona uma animação de escala ao passar o mouse */
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}
+
+
+fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222222; /* Escolha a cor de fundo desejada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicione uma sombra se desejar */
+    z-index: 1000; /* Ajuste a ordem de empilhamento conforme necessário */
+}
+
+
+.mobile-menu-icon {
+    display:none;
+
+ 
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-left: 240px;
+}
+
+nav ul {
+    list-style: none;
+   
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #61C5E0;
+}
+
+.cta-button .button {
+    background-color: #6e2fb6;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    margin-right: 240px;
+}
+
+.cta-button .button:hover {
+    background-color: #ffffff;
+    color: #1d1d1d;
+    
+}
+
+/* Consulta de mídia para telas de tamanho médio */
+@media (max-width: 1024px) {
+      header {
+        flex-direction: row; /* Altera a direção de coluna para linha */
+        justify-content: space-between; /* Alinha a logo à esquerda e a navegação à direita */
+        align-items: center; /* Alinha verticalmente ao centro */
+    }
+
+    .logo img {
+        margin-left: 240px; /* Mantém a margem da logo */
+        margin-bottom: 0; /* Remove a margem inferior da logo */
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .cta-button .button {
+        margin-right: 240px;
+    }
+}
+
+
+
+
+
+/* Consulta de mídia para ocultar o botão em dispositivos móveis */
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+
+/* Consulta de mídia para telas menores */
+@media screen and (max-width: 465px) {
+    header {
+        flex-direction: column; /* Alinhar verticalmente em telas menores */
+        text-align: center;
+    }
+
+    .logo img {
+        margin-left: 0; /* Remover margem à esquerda em telas menores */
+        margin-bottom: 20px; /* Adicionar espaço entre a logo e a navegação */
+    }
+
+    nav ul {
+        padding: 0; /* Remover preenchimento da lista de navegação */
+        column-gap: px;
+        font-size: 13px;
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remover margem entre os itens de menu */
+        margin-bottom: 10px; /* Adicionar espaço entre os itens de menu */
+    }
+
+    .cta-button .button {
+        margin-right: 0; /* Remover margem do botão CTA */
+    }
+}
+
+/* Consulta de mídia para telas menores */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinhar verticalmente em telas menores */
+        text-align: center;
+    }
+
+    .logo img {
+        margin-left: 0; /* Remover margem à esquerda em telas menores */
+        margin-bottom: 20px; /* Adicionar espaço entre a logo e a navegação */
+    }
+
+    nav ul {
+        padding: 0; /* Remover preenchimento da lista de navegação */
+        column-gap: px;
+    }
+
+    .container nav ul li {
+        margin-right: 0; /* Remover margem entre os itens de menu */
+        margin-bottom: 10px; /* Adicionar espaço entre os itens de menu */
+    }
+
+    cta-button .button {
+        margin-right: 0; /* Remover margem do botão CTA */
+    }
+}
+
+
+
+
+ 
+/* Estilos para a sessão com fundo de imagem */
+.section-with-background {
+    background-image: url('img/pexels-negative-space-160107.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 250px 0; /* Ajuste o espaçamento conforme necessário */
+    color: white; /* Cor do texto */
+}
+
+.section-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+    border-radius: 20px;
+    padding: 20px;
+    width: 600px; /* Ajuste a largura conforme necessário */
+    margin-left: 250px; /* Espaço à esquerda da imagem de fundo */
+    text-align: center;
+}
+
+.section-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.section-content button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor do botão */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.section-content button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+.blue-text {
+    color: #61c5e0; /* Cor desejada para as palavras "desenvolvimentos gráficos" e "desenvolvimento web" */
+}
+
+
+/* Estilos para telas pequenas (por exemplo, celulares) */
+@media (max-width: 768px) {
+    .section-with-background {
+        background-attachment: local; /* Altera para rolagem padrão do plano de fundo */
+        padding: 50px ; /* Ajusta o espaçamento superior e inferior */
+        
+    }
+
+    .section-content {
+        width: 100%; /* Ocupa a largura total da tela */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        padding: 2px 10px; /* Ajusta o preenchimento interno */
+    }
+
+    .section-content h2 {
+        font-size: 20px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .section-content p {
+        font-size: 14px; /* Reduz o tamanho da fonte do texto */
+    }
+
+    .section-content button {
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+    }
+}
+
+
+/* Estilos para o botão do portfólio */
+.portfolio-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-button:hover {
+    background-color: #0056b3;
+}
+
+.button-text {
+    display: block;
+    padding: 10px 0;
+}
+
+.blue-text {
+    color: #61c5e0;
+}
+/* Titulo portifólio */
+
+.portfolio-section {
+    background-color: #6E2FB6; /* Cor de fundo cinza claro */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.portfolio-section h1 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    color: #ffffff; /* Cor do texto do título */
+    margin: 0; /* Remove as margens padrão do título */
+}
+
+/* ----------------------Galeria-------------- */
+.gallery img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    
+    column-count: 2; /* Divide as imagens em 4 colunas */
+    column-gap: 10px;
+    margin: 0 px;
+    
+    
+}
+
+.purple-footer {
+    background-color: purple;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.cinza-footer {
+    background-color: rgb(36, 35, 36);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.contact-info li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.contact-info a, .contact-info a:hover {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #61c5e0;
+}
+
+.logo-footer {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 150px; /* Defina o tamanho da sua logo aqui */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #2E2E2E;
+}
+
+/* Estilos para telas pequenas (até 768px de largura) */
+@media (max-width: 768px) {
+    header li {
+        display: block;
+        padding-top: 15px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    header li img {
+        width: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    .gallery {
+        column-count: 1; /* Exibe uma coluna de imagens em telas pequenas */
+    }
+}
+
+/* Estilos para telas pequenas (até 768px de largura) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    header li img {
+        width: 120px;
+        position: static;
+        transform: none;
+        margin: 0 auto 10px;
+    }
+
+    header li a {
+        padding: 10px 20px;
+    }
+
+    header li img {
+        width: 120px;
+    }
+}
+
+/* Estilos para telas médias (entre 769px e 1024px de largura) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header li img {
+        width: 150px;
+    }
+}
+
+/* Estilos para a seção de pacotes - Terceira Opção */
+
+
+.services-content {
+    margin-bottom: 30px;
+}
+
+.services-content h2 {
+    font-size: 36px; /* Tamanho da fonte aumentado */
+    margin-bottom: 20px; /* Espaçamento aumentado */
+}
+
+.services-content p {
+    font-size: 18px;
+    color: #ccc; /* Texto cinza claro */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-option {
+    background-color: #333; /* Fundo cinza escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.service-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.service-option h3 {
+    font-size: 24px; /* Tamanho da fonte aumentado */
+    color: #ffffff; /* Texto branco */
+    margin-bottom: 15px;
+}
+
+.service-option p {
+    font-size: 16px;
+    color: #ffffff; /* Texto cinza claro */
+    margin-bottom: 20px;
+}
+
+.service-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-option ul li {
+    margin-bottom: 10px;
+}
+
+.service-option .price {
+    font-size: 28px; /* Tamanho da fonte aumentado */
+    color: #ffffff; /* Cor roxa */
+    margin: 20px 0; /* Espaçamento aumentado */
+}
+
+.btn-buy {
+    display: inline-block;
+    background-color: #800080; /* Cor roxa */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px; /* Maior preenchimento */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #6a006a; /* Cor roxa mais escura ao passar o mouse */
+    color: #fff; /* Texto branco */
+}
+
+
+
+/* Estilos para a seção de -ços */
+.services {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.services .service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service img {
+    max-width: 80px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.service h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    
+}
+
+.service a.btn-buy {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #61C5E0;
+    color: #212121;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service a.btn-buy:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .service {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+
+
+/* Estilos para a seção de serviços */
+.services {
+    background-color: #333333;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+    animation: scroll 20s linear infinite; /* Ajuste a duração da animação conforme necessário */
+    white-space: nowrap;
+}
+
+.service {
+    flex: 0 0 33.33%; /* Ajuste a largura conforme necessário (3 serviços no exemplo) */
+    margin: 10px;
+    padding: 20px;
+    background-color: #444444;
+    border-radius: 5px;
+    text-align: center;
+    white-space: normal;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-33.33% * 3)); /* Ajuste o valor de acordo com a largura dos serviços */
+    }
+}
+
+
+
+
+
+
+
+
+
