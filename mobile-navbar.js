@@ -1,44 +1,15 @@
-class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) {
-      this.mobileMenu = document.querySelector(mobileMenu);
-      this.navList = document.querySelector(navList);
-      this.navLinks = document.querySelectorAll(navLinks);
-      this.activeClass = "active";
-  
-      this.handleClick = this.handleClick.bind(this);
-    }
-  
-    animateLinks() {
-      this.navLinks.forEach((link, index) => {
-        link.style.animation
-          ? (link.style.animation = "")
-          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-              index / 7 + 0.3
-            }s`);
-      });
-    }
-  
-    handleClick() {
-      this.navList.classList.toggle(this.activeClass);
-      this.mobileMenu.classList.toggle(this.activeClass);
-      this.animateLinks();
-    }
-  
-    addClickEvent() {
-      this.mobileMenu.addEventListener("click", this.handleClick);
-    }
-  
-    init() {
-      if (this.mobileMenu) {
-        this.addClickEvent();
-      }
-      return this;
-    }
+// Função para clonar os serviços e preencher o espaço vazio
+function cloneServices() {
+  const container = document.querySelector('.container');
+  const services = document.querySelectorAll('.service');
+  const serviceWidth = services[0].offsetWidth + 20; // Largura do serviço mais a margem direita
+
+  // Verifique se a largura atual do container é menor que a largura dos serviços
+  while (container.offsetWidth < serviceWidth * services.length) {
+      const clone = services[0].cloneNode(true);
+      container.appendChild(clone);
   }
-  
-  const mobileNavbar = new MobileNavbar(
-    ".mobile-menu",
-    ".nav-list",
-    ".nav-list li",
-  );
-  mobileNavbar.init();  
+}
+
+// Chame a função para clonar os serviços
+cloneServices();

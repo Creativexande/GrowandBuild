@@ -1,10 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* Estilos para o ícone do WhatsApp */
+.container .whatsapp-icon {
+    position: fixed; /* Torna o ícone fixo na tela */
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Ajuste a posição horizontal conforme necessário */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+}
+
+.container .whatsapp-icon a {
+    text-decoration: none;
+}
+
+.whatsapp-icon img {
+    width: 70px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Torna o ícone circular */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    transition: transform 0.3s ease; /* Adiciona uma animação de escala ao passar o mouse */
+}
+
+.container .whatsapp-icon img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
 }
 
 
@@ -19,53 +44,56 @@ fixed-header {
 }
 
 
-/* Reset de Estilos Padrão do Navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.mobile-menu-icon {
+    display:none;
+
+ 
 }
 
-/* Estilos para o Cabeçalho */
-/* Estilos padrão */
+.mobile-menu {
+    display: none;
+}
 
 
-header {
+.container header {
     background-color: #222;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
-.logo img {
+.container .logo img {
     max-width: 150px;
     height: auto;
     margin-left: 240px;
 }
 
-nav ul {
+.container nav ul {
     list-style: none;
+   
+
 }
 
-nav ul li {
+.container nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav ul li a {
+.container nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.container nav ul li a:hover {
     color: #61C5E0;
 }
 
-.cta-button .button {
+.container .cta-button .button {
     background-color: #6e2fb6;
     color: #ffffff;
     text-decoration: none;
@@ -77,11 +105,43 @@ nav ul li a:hover {
     margin-right: 240px;
 }
 
-.cta-button .button:hover {
+.container .cta-button .button:hover {
     background-color: #ffffff;
     color: #1d1d1d;
     
 }
+
+/* Consulta de mídia para telas de tamanho médio */
+@media (max-width: 1024px) {
+    .container   header {
+        flex-direction: row; /* Altera a direção de coluna para linha */
+        justify-content: space-between; /* Alinha a logo à esquerda e a navegação à direita */
+        align-items: center; /* Alinha verticalmente ao centro */
+    }
+
+    .container .logo img {
+        margin-left: 240px; /* Mantém a margem da logo */
+        margin-bottom: 0; /* Remove a margem inferior da logo */
+    }
+
+    .container nav ul {
+        padding: 0;
+    }
+
+    .container nav ul li {
+        display: inline;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .container .cta-button .button {
+        margin-right: 240px;
+    }
+}
+
+
+
+
 
 /* Consulta de mídia para ocultar o botão em dispositivos móveis */
 @media (max-width: 768px) {
@@ -90,10 +150,9 @@ nav ul li a:hover {
     }
 }
 
-
 /* Consulta de mídia para telas menores */
-@media screen and (max-width: 768px) {
-    header {
+@media screen and (max-width: 465px) {
+    .container header {
         flex-direction: column; /* Alinhar verticalmente em telas menores */
         text-align: center;
     }
@@ -103,16 +162,45 @@ nav ul li a:hover {
         margin-bottom: 20px; /* Adicionar espaço entre a logo e a navegação */
     }
 
-    nav ul {
+    .container nav ul {
         padding: 0; /* Remover preenchimento da lista de navegação */
+        column-gap: px;
+        font-size: 13px;
     }
 
-    nav ul li {
+    .container nav ul li {
         margin-right: 0; /* Remover margem entre os itens de menu */
         margin-bottom: 10px; /* Adicionar espaço entre os itens de menu */
     }
 
-    .cta-button .button {
+    .container .cta-button .button {
+        margin-right: 0; /* Remover margem do botão CTA */
+    }
+}
+
+/* Consulta de mídia para telas menores */
+@media screen and (max-width: 768px) {
+    .container header {
+        flex-direction: column; /* Alinhar verticalmente em telas menores */
+        text-align: center;
+    }
+
+    .container.logo img {
+        margin-left: 0; /* Remover margem à esquerda em telas menores */
+        margin-bottom: 20px; /* Adicionar espaço entre a logo e a navegação */
+    }
+
+    .container nav ul {
+        padding: 0; /* Remover preenchimento da lista de navegação */
+        column-gap: px;
+    }
+
+    .container nav ul li {
+        margin-right: 0; /* Remover margem entre os itens de menu */
+        margin-bottom: 10px; /* Adicionar espaço entre os itens de menu */
+    }
+
+    .container.cta-button .button {
         margin-right: 0; /* Remover margem do botão CTA */
     }
 }
@@ -122,7 +210,7 @@ nav ul li a:hover {
 
  
 /* Estilos para a sessão com fundo de imagem */
-.section-with-background {
+.container .section-with-background {
     background-image: url('img/pexels-negative-space-160107.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
     background-size: cover;
     background-repeat: no-repeat;
@@ -131,7 +219,7 @@ nav ul li a:hover {
     color: white; /* Cor do texto */
 }
 
-.section-content {
+.container .section-content {
     background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
     border-radius: 20px;
     padding: 20px;
@@ -140,17 +228,17 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.section-content h2 {
+.container .section-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.section-content p {
+.container .section-content p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.section-content button {
+.container .section-content button {
     padding: 10px 20px;
     background-color: #007bff; /* Cor do botão */
     color: #fff;
@@ -158,11 +246,11 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.section-content button:hover {
+.container .section-content button:hover {
     background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
 
-.blue-text {
+.container .blue-text {
     color: #61c5e0; /* Cor desejada para as palavras "desenvolvimentos gráficos" e "desenvolvimento web" */
 }
 
@@ -309,14 +397,8 @@ nav ul li a:hover {
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    text-align: center;
-    background-color: #2E2E2E;
-}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
@@ -398,28 +480,21 @@ body {
     }
 }
 
-/* Estilos para a seção de pacotes */
-.services {
-    background-color: #414141; /* Fundo preto */
-    padding: 80px 0;
-    text-align: center;
+/* Estilos para a seção de pacotes - Terceira Opção */
 
-    
-}
 
 .services-content {
     margin-bottom: 30px;
 }
 
 .services-content h2 {
-    font-size: 32px; /* Tamanho da fonte aumentado */
-    color: #fff; /* Texto branco */
+    font-size: 36px; /* Tamanho da fonte aumentado */
     margin-bottom: 20px; /* Espaçamento aumentado */
 }
 
 .services-content p {
-    font-size: 18px; /* Tamanho da fonte aumentado */
-    color: #aaa; /* Texto cinza claro */
+    font-size: 18px;
+    color: #ccc; /* Texto cinza claro */
     max-width: 800px;
     margin: 0 auto;
 }
@@ -434,10 +509,10 @@ body {
 }
 
 .service-option {
-    background-color: #fff; /* Fundo branco */
+    background-color: #333; /* Fundo cinza escuro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: left;
+    padding: 30px;
+    text-align: center;
     border-radius: 8px;
     width: 300px;
     transition: transform 0.3s ease;
@@ -450,14 +525,14 @@ body {
 
 .service-option h3 {
     font-size: 24px; /* Tamanho da fonte aumentado */
-    color: #333;
-    margin-bottom: 10px;
+    color: #ffffff; /* Texto branco */
+    margin-bottom: 15px;
 }
 
 .service-option p {
     font-size: 16px;
-    color: #666;
-    margin-bottom: 15px;
+    color: #ffffff; /* Texto cinza claro */
+    margin-bottom: 20px;
 }
 
 .service-option ul {
@@ -467,12 +542,12 @@ body {
 }
 
 .service-option ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .service-option .price {
     font-size: 28px; /* Tamanho da fonte aumentado */
-    color: #800080; /* Cor roxa */
+    color: #ffffff; /* Cor roxa */
     margin: 20px 0; /* Espaçamento aumentado */
 }
 
@@ -481,7 +556,7 @@ body {
     background-color: #800080; /* Cor roxa */
     color: #fff;
     text-decoration: none;
-    padding: 12px 24px; /* Maior preenchimento */
+    padding: 15px 30px; /* Maior preenchimento */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -491,7 +566,9 @@ body {
     color: #fff; /* Texto branco */
 }
 
-/* Estilos para a seção de serviços */
+
+
+/* Estilos para a seção de -ços */
 .services {
     background-color: #000;
     color: #fff;
@@ -530,6 +607,7 @@ body {
 .service img {
     max-width: 80px;
     margin-bottom: 10px;
+    display: none;
 }
 
 .service h3 {
@@ -540,13 +618,14 @@ body {
 .service p {
     font-size: 14px;
     margin-bottom: 15px;
+    
 }
 
 .service a.btn-buy {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #61C5E0;
+    color: #212121;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -562,12 +641,9 @@ body {
     }
 }
 
-@media (max-width: 576px) {
-    .service {
-        flex: 0 0 calc(100% - 20px);
-    }
-}
-/* Estilo para a seção de serviços com rolagem automática */
+
+
+/* Estilos para a seção de serviços */
 .services {
     background-color: #333333;
     color: #ffffff;
@@ -577,22 +653,20 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
     padding: 20px 0;
-    overflow: hidden; /* Esconde a barra de rolagem horizontal */
+    animation: scroll 20s linear infinite; /* Ajuste a duração da animação conforme necessário */
+    white-space: nowrap;
 }
 
 .service {
-    flex: 0 0 auto;
-    width: 250px;
-    max-height: 250px; /* Altura máxima para os serviços */
-    margin-right: 20px;
+    flex: 0 0 33.33%; /* Ajuste a largura conforme necessário (3 serviços no exemplo) */
+    margin: 10px;
     padding: 20px;
-    text-align: center;
     background-color: #444444;
     border-radius: 5px;
-    animation: scroll 20s linear infinite; /* Animação de rolagem automática */
-    overflow-y: hidden; /* Remove a barra de rolagem vertical */
+    text-align: center;
+    white-space: normal;
 }
 
 @keyframes scroll {
@@ -600,28 +674,8 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 10)); /* Ajuste o valor para o número total de serviços */
+        transform: translateX(calc(-33.33% * 3)); /* Ajuste o valor de acordo com a largura dos serviços */
     }
-}
-
-.service img {
-    max-width: 60px;
-    border-radius: 50%;
-}
-
-.service .btn-buy {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.service .btn-buy:hover {
-    background-color: #0056b3;
 }
 
 
